@@ -2,16 +2,14 @@
   Layout = "_Layout";
 }
 
-<body id="update-success">
+<body id="band-form">
+  <h1>The band was successfully updated</h1>
   <div class="container">
-    <div class="well success">
-      <h1>The band was successfully updated</h1>
-
-      <h2>Updated Information</h2>
-      <p><strong>New band name:</strong> @Model.GetName()</p>
-      <p><strong>New band price:</strong> $@Model.GetPrice()</p>
+    <div class="well form-well">
+      <p class="detail"><strong>New band name:</strong> @Model.GetName()</p>
+      <p class="detail"><strong>New band price:</strong> $@Model.GetPrice()</p>
     </div>
-    <a href="/band/detail/@Model.GetId()"><button type="button" class="btn btn-default view-venues">Back to @Model.GetName() details</button></a>
-    <a href="/view/bands"><button type="button" class="btn btn-default">View Bands</button></a>
+    <a href="/band/detail/@Model.GetId()"><button type="button" class="btn btn-default form-btns">Back to @Model.GetName() details</button></a>
+    <a href="/view/bands"><button type="button" class="btn btn-default form-btns">View Bands</button></a>
   </div>
 </body>

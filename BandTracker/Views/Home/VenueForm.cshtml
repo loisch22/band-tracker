@@ -3,17 +3,20 @@
 }
 
 <body id="venue-form">
-  <h1>Create a new venue</h1>
+  <h1 class="header">Add a New Venue</h1>
 
-  <form action="/venue/success" method="post" class="form-group">
-    <label for="name">Venue name:</label>
-    <input type="text" name="name" class="form-control">
-    <label for="price">Venue price:</label>
-    <input type="text" name="price" class="form-control">
-    <button type="submit" class="btn btn-success submit-venue">Create Venue</button>
-  </form>
-
-  <a href="/view/venues"><button type="button" class="btn btn-default navbar-btn">View Venues</button></a>
-  <a href="/view/bands"><button type="button" class="btn btn-default navbar-btn">View Bands</button></a>
-  <a href="/"><button type="button" class="btn btn-default">Cancel</button></a>
+  <div class="container">
+    <div class="well form-well">
+      <form action="/venue/success" method="post" class="form-group">
+        <label class="label" for="name">Venue name:</label>
+        <input type="text" name="name" class="form-control form-field">
+        <label class="label" for="price">Venue price:</label>
+        <input type="text" name="price" class="form-control form-field">
+        <button type="submit" class="btn btn-success create-venue">Create Venue</button>
+      </form>
+    </div>
+    <a href="/"><button type="button" class="btn btn-default form-btns">Go Home</button></a>
+    <a href="/view/bands"><button type="button" class="btn btn-default form-btns">View Bands</button></a>
+    <a href="/view/venues"><button type="button" class="btn btn-default form-btns">View Venues</button></a>
+  </div>
 </body>

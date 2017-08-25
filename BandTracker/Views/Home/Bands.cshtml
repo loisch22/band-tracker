@@ -2,12 +2,16 @@
   Layout = "_Layout";
 }
 
-<body id="venues">
-  <h1>Bands</h1>
-  <ul>
-    @foreach (var band in Model)
-    {
-      <a href="/band/detail/@band.GetId()"><li>@band.GetName()</li></a>
-    }
-  </ul>
+<body id="bands">
+  <h1 class="header">Bands</h1>
+  <div class="container">
+    <div class="well band-well">
+      <ul>
+        @foreach (var band in Model)
+        {
+          <a class="band-list" href="/band/detail/@band.GetId()"><li class="list-space">@band.GetName()</li></a>
+        }
+      </ul>
+    </div>
+  </div>
 </body>

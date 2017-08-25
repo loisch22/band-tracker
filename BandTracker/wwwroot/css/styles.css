@@ -27,12 +27,12 @@
   background-size: cover;
   background-attachment: fixed;
 }
-.header-index {
+.header {
   text-align: center;
   font-family: 'Open Sans', sans-serif;
   font-size: 3em;
   color: #ffffff;
-  letter-spacing: 7px;
+  letter-spacing: 10px;
   margin-top: 8%;
 }
 .index-venues, .index-bands {
@@ -45,7 +45,7 @@
   background-color: transparent;
   color: #ffffff;
 }
-.index-venues:hover, .index-bands:hover {
+.index-venues:hover, .index-venues:active, .index-bands:hover, .index-bands:active {
   background-color: #b9b9b9;
   opacity: .55;
 }
@@ -55,4 +55,133 @@
 }
 .index-bands {
   margin-right: 25%;
+}
+#venues, #venue-details {
+  background-image: url("/img/venue.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+}
+.venue-well, .band-well {
+  opacity: .4;
+  margin: 4% 20% 13% 20%;
+  border-radius: 0;
+}
+.venue-list, .band-list {
+  text-align: center;
+  list-style-type: none;
+  font-size: 20px;
+  color: #000000;
+  letter-spacing: 3px;
+}
+.venue-list:hover, .venue-list:active {
+  color: 	#8b008b;
+  text-decoration: none;
+  font-weight: bolder;
+}
+.band-list:hover, .band-list:active {
+  color: #f95c6f;
+  text-decoration: none;
+  font-weight: bolder;
+}
+.list-space {
+  margin-bottom: 20px;
+}
+#bands, #band-details {
+  background-image: url("/img/band.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+}
+#venue-form {
+  background-image: url("/img/venue-form.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+}
+.form-well, .details-well, .details-past {
+  margin-top: 5%;
+  opacity: .57;
+  border-radius: 0;
+  padding: 40px;
+  padding-bottom: 95px;
+}
+.details-well {
+  text-align: center;
+  margin-left: 20%;
+  margin-right: 20%;
+  padding-bottom: 10%;
+}
+.label {
+  font-size: 16px;
+  color: #000000;
+  letter-spacing: 3px;
+}
+.form-field {
+  margin-top: 20px;
+  margin-bottom: 40px;
+  font-size: 20px;
+  padding: 20px;
+  border: solid 2px;
+  color: #050a84;
+  letter-spacing: 4px;
+}
+.create-venue, .create-band {
+  float: right;
+  margin-bottom: 15px;
+  letter-spacing: 4px;
+  padding: 13px 20px 13px 20px;
+  border-color: #2877a4;
+  background: transparent;
+  color: #2877a4;
+}
+.create-venue:hover, .create-band:hover, .btn-update:hover {
+  background-color: #050a84;
+  color: #ffffff;
+}
+.form-btns {
+  float: right;
+  margin-top: 20px;
+  margin-left: 50px;
+  margin-bottom: 15%;
+  letter-spacing: 4px;
+  padding: 10px 15px 10px 15px;
+  font-size: 15px;
+  background: transparent;
+  color: #ffffff;
+}
+#band-form {
+  background-image: url("/img/band-form.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+}
+.detail {
+  font-size: 20px;
+  letter-spacing: 4px;
+  margin-bottom: 15px;
+}
+.btn-update, .btn-delete {
+  float: right;
+  margin-left: 40px;
+  margin-top: 40px;
+  margin-bottom: 30px;
+  font-size: 13.5px;
+  letter-spacing: 3px;
+  padding: 8px 16px 8px 16px;
+  border: none;
+}
+.btn-update {
+  background-color: #2877a4;
+  color: #ffffff;
+}
+.btn-delete {
+  background-color: #b60000;
+  color: #ffffff;
+}
+.btn-delete:hover {
+  background-color: #ff0000;
+  color: #ffffff;
+}
+.selectpicker {
+  font-size: 20px;
+}
+.select-btn {
+  letter-spacing: 2px;
 }
