@@ -121,7 +121,7 @@ namespace BandTracker.Models
       conn.Open();
 
       var cmd = conn.CreateCommand() as MySqlCommand;
-      cmd.CommandText = @"DELETE FROM bands WHERE id = @id;"; //change to join statement to only delete band associated with the venue
+      cmd.CommandText = @"DELETE FROM bands WHERE id = @id;"; //change to join statement to only delete band from specific venue, but NOT if band performed at other venue
 
       MySqlParameter idParam = new MySqlParameter();
       idParam.ParameterName = "@id";
