@@ -116,10 +116,37 @@ namespace BandTracker.Tests
       Assert.AreEqual(expected, actual);
     }
 
-    // [TestMethod]
-    // public void AddBand_AddBandToVenue_Band()
-    // {
-    //
-    // }
+    [TestMethod]
+    public void AddBand_AddBandToVenue_Band()
+    {
+      Venue newVenue = new Venue("Key Arena", 200);
+      newVenue.Save();
+
+      Band newBand = new Band("Green Day", 200);
+      newBand.Save();
+
+      newVenue.AddBand(newBand.GetId());
+
+      List<Band> expected = new List<Band>{newBand};
+      List<Band> actual = newVenue.GetBands();
+
+      CollectionAssert.AreEqual(expected, actual);
+    }
+    [TestMethod]
+    public void GetBands_GetBandsForVenue_List()
+    {
+      Venue newVenue = new Venue("Key Arena", 200);
+      newVenue.Save();
+
+      Band newBand = new Band("Green Day", 200);
+      newBand.Save();
+
+      newVenue.AddBand(newBand.GetId());
+
+      List<Band> expected = new List<Band>{newBand};
+      List<Band> actual = newVenue.GetBands();
+
+      CollectionAssert.AreEqual(expected, actual);
+    }
   }
 }
