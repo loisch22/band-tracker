@@ -12,7 +12,7 @@ _Users are able to use this application to see which bands performed at which ve
 
 * _Requires MAMP and MySQL as well as C# and .NET_
 
-_Download the necessary files from my GitHub Page._
+_Download the necessary files from my <a href="https://github.com/loisch22/band-tracker.git">GitHub Page.</a>_
 
 | Specifications | Input   | Output   |
 | -------  | ------- | -------   |
@@ -23,7 +23,19 @@ _Download the necessary files from my GitHub Page._
 | 5. User can update a venue's details | >Update venue detail | >Updated details display in place of old details |
 | 6. User can delete a venue and its bands | >Delete venue  | >Updated >Venue and list of bands for that venue deleted |
 
+## <a href="http://ondras.zarovi.cz/sql/demo/">WWW SQL Designer</a>
 ![](/schema.png)
+
+## Database Setup
+| >mysql  |
+| -------  |
+| Turn on server |
+| ~ /Applications/MAMP/Library/bin/mysql --host=localhost -uroot -proot |
+| > CREATE DATABASE band_tracker; |
+| > USE band_tracker; |
+| > CREATE TABLE bands (id serial PRIMARY KEY, name VARCHAR(255)); |
+| > CREATE TABLE venues (id serial PRIMARY KEY, name VARCHAR(255)); |
+| > CREATE TABLE bands_venues (id serial PRIMARY KEY, band_id INT, venue_id INT);|
 
 ## Known Bugs
 
