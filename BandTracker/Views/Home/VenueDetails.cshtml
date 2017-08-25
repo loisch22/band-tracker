@@ -9,6 +9,8 @@
     <div class="well details">
       <p><strong>Venue name:</strong> @Model["venue"].GetName()</p>
       <p><strong>Venue price:</strong> $@Model["venue"].GetPrice()</p>
+      <a href='/venue/update/@Model["venue"].GetId()'><button type="button" class="btn btn-warning">Update Details</button></a>
+      <a href='/venue/delete/@Model["venue"].GetId()'><button type="button" class="btn btn-danger">Delete</button></a>
     </div>
 
     <p><strong>Past band performances:</strong></p>
@@ -19,14 +21,18 @@
         }
       </ul>
 
-    <p><strong>Add another band to @Model["venue"].GetName():</strong></p>
-    <form action='/venue/detail/@Model["venue"].GetId()' method="post" class="form-group">
-      <label for="new-band">Band name:</label>
-      <input type="text" name="band-name" class="form-control band-name">
-      <label for="band-price">Band price:</label>
-      <input type="text" name="band-price" class="form-control band-price">
-      <button type="submit" class="btn btn-default venue-details-add-band">Add band</button>
+    <form action='/add/band/venue/@Model["venue"].GetId()' method="post">
+      <label for="band"><h5>Select Band:</h5></label>
+      <select class="selectpicker" name="band">
+        @foreach(var band in @Model["allBands"])
+        {
+          <option value="@band.GetId()">@band.GetName()</option>
+        }
+      </select>
+      <button type="submit" name="button" class="btn btn-success">Select band</button>
     </form>
-    <a href="/"><button type="button" class="btn btn-default">Go home</button></a>
+
+    <a href="/band/form"><button type="button" class="btn btn-default navbar-btn">Add New Band</button></a>
+    <a href="/view/venues"><button type="button" class="btn btn-default">View Venues</button></a>
   </div>
 </body>

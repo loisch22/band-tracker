@@ -1,0 +1,16 @@
+@{
+  Layout = "_Layout";
+}
+
+<body id="venue-form">
+  <h1>Update @Model.GetName()</h1>
+
+  <form action="/venue/update/@Model.GetId()/success" method="post" class="form-group">
+    <label for="name">Venue name:</label>
+    <input type="text" name="name" class="form-control" value="@Model.GetName()">
+    <label for="price">Venue price:</label>
+    <input type="text" name="price" class="form-control" value="@Model.GetPrice()">
+    <button type="submit" class="btn btn-success submit-venue">Update Venue</button>
+  </form>
+  <a href="/venue/detail/@Model.GetId()"><button type="button" class="btn btn-default">Cancel</button></a>
+</body>

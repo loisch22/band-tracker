@@ -1,0 +1,58 @@
+#nav {
+  background-color: #000019;
+  border: none;
+}
+.navbar-btn {
+  background-color: #000019;
+  border: none;
+  color: #ffffff;
+  letter-spacing: 4px;
+  font-family: 'Open Sans', sans-serif;
+  margin-left: 80px;
+  font-size: 15px;
+}
+.navbar-btn:hover, .navbar-btn:active {
+  color: #8e8e8e;
+  background-color: #000019;
+  border: none;
+}
+.navbar-bandtracker, .navbar-bandtracker:hover {
+  color: #ffffff;
+  letter-spacing: 3px;
+  font-family: 'Open Sans', sans-serif;
+  text-decoration: none;
+}
+#index {
+  background-image: url("/img/index-bg.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+}
+.header-index {
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 3em;
+  color: #ffffff;
+  letter-spacing: 7px;
+  margin-top: 8%;
+}
+.index-venues, .index-bands {
+  margin-top: 40%;
+  margin-bottom: 13%;
+  padding: 10px 20px 10px 20px;
+  font-size: 18px;
+  letter-spacing: 5px;
+  font-family: 'Open Sans', sans-serif;
+  background-color: transparent;
+  color: #ffffff;
+}
+.index-venues:hover, .index-bands:hover {
+  background-color: #b9b9b9;
+  opacity: .55;
+}
+.index-venues {
+  margin-left: 25%;
+  margin-right: 15%;
+}
+.index-bands {
+  margin-right: 25%;
+}

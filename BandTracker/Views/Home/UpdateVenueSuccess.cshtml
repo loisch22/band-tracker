@@ -1,0 +1,17 @@
+@{
+  Layout = "_Layout";
+}
+
+<body id="update-success">
+  <div class="container">
+    <div class="well success">
+      <h1>The venue was successfully updated</h1>
+
+      <h2>Updated Information</h2>
+      <p><strong>New venue name:</strong> @Model.GetName()</p>
+      <p><strong>New venue price:</strong> $@Model.GetPrice()</p>
+    </div>
+    <a href="/venue/detail/@Model.GetId()"><button type="button" class="btn btn-default view-venues">Back to @Model.GetName() details</button></a>
+    <a href="/view/venues"><button type="button" class="btn btn-default">View Venues</button></a>
+  </div>
+</body>

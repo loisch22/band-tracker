@@ -6,7 +6,7 @@
 
 ## Description
 
-_Users are able to use this application to see which bands performed at which venues and which venues hosted which bands. Users can also add a venue and/or add a band as well._
+_Users are able to use this application to see which bands performed at which venues and which venues hosted which bands. Users can also create, read, update, and delete a venue and/or add a band as well._
 
 ## Setup/Installation Requirements
 
@@ -20,8 +20,8 @@ _Download the necessary files from my <a href="https://github.com/loisch22/band-
 | 2. User can add a band | >Add Band Form | >New Band added, confirmation shown, list of bands shown |
 | 3. User can click a venue to see its details and add a band to that venue | >Add band to venue  | >Band name displayed on specific venue details page |
 | 4. User can click on band to see its details and add a venue to that band | >Add venue to band  | >Venue name displayed on specific band details page |
-| 5. User can update a venue's details | >Update venue detail | >Updated details display in place of old details |
-| 6. User can delete a venue and its bands | >Delete venue  | >Updated >Venue and list of bands for that venue deleted |
+| 5. User can update a venue's details AND a bands details | >Update venue detail/band detail | >Updated details display in place of old details |
+| 6. User can delete a venue and its bands AND a band and its venues | >Delete venue/band  | >Deleted venue/band no longer in Venue/Band list|
 
 ## <a href="http://ondras.zarovi.cz/sql/demo/">WWW SQL Designer</a>
 ![](/schema.png)
