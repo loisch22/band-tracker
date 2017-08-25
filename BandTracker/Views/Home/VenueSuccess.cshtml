@@ -1,0 +1,16 @@
+@{
+  Layout = "_Layout";
+}
+
+<body id="venue-success">
+  <div class="container">
+    <div class="well success">
+      <h1>The venue <em>@Model.GetName()</em> has been successfully created!</h1>
+
+      <p><strong>Venue name:</strong> @Model.GetName()</p>
+      <p><strong>Venue price:</strong> $@Model.GetPrice()</p>
+    </div>
+    <a href="/view/venues"><button type="button" class="btn btn-default view-venues">View Updated Venues</button></a>
+    <a href="/"><button type="button" class="btn btn-default">Go home</button></a>
+  </div>
+</body>

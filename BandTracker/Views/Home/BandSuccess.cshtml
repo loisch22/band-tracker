@@ -1,0 +1,16 @@
+@{
+  Layout = "_Layout";
+}
+
+<body id="band-success">
+  <div class="container">
+    <div class="well success">
+      <h1>The band <em>@Model.GetName()</em> has been successfully added!</h1>
+
+      <p><strong>Band name:</strong> @Model.GetName()</p>
+      <p><strong>Band price:</strong> $@Model.GetPrice()</p>
+    </div>
+    <a href="/view/venues"><button type="button" class="btn btn-default view-venues">View Updated Bands</button></a>
+    <a href="/"><button type="button" class="btn btn-default">Go home</button></a>
+  </div>
+</body>

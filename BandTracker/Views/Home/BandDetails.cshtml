@@ -1,0 +1,32 @@
+@{
+  Layout = "_Layout";
+}
+
+<body id="venue-details">
+  <h1>Details for the band: <em>@Model["band"].GetName()</em></h1>
+
+  <div class="container">
+    <div class="well details">
+      <p><strong>Band name:</strong> @Model["band"].GetName()</p>
+      <p><strong>Band price:</strong> $@Model["band"].GetPrice()</p>
+    </div>
+
+    <p><strong>Past venues performed:</strong></p>
+      <ul>
+        @foreach (var venue in @Model["venues"])
+        {
+          <a href="/venue/detail/@venue.GetId()"><li>@venue.GetName()</li></a>
+        }
+      </ul>
+
+    <p><strong>Add another venue to @Model["band"].GetName():</strong></p>
+    <form action='/band/detail/@Model["band"].GetId()' method="post" class="form-group">
+      <label for="new-venue">Venue name:</label>
+      <input type="text" name="venue-name" class="form-control venue-name">
+      <label for="venue-price">Venue price:</label>
+      <input type="text" name="venue-price" class="form-control venue-price">
+      <button type="submit" class="btn btn-default venue-details-add-band">Add venue</button>
+    </form>
+    <a href="/"><button type="button" class="btn btn-default">Go home</button></a>
+  </div>
+</body>

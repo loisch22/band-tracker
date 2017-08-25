@@ -1,0 +1,16 @@
+@{
+  Layout = "_Layout";
+}
+
+<body id="band-form">
+  <h1>Add a new band</h1>
+
+  <form action="/band/success" method="post" class="form-group">
+    <label for="name">Band name:</label>
+    <input type="text" name="name" class="form-control">
+    <label for="price">Band price:</label>
+    <input type="text" name="price" class="form-control">
+    <button type="submit" class="btn btn-success submit-venue">Add band</button>
+  </form>
+  <a href="/"><button type="button" class="btn btn-default">Cancel</button></a>
+</body>

@@ -1,0 +1,13 @@
+@{
+  Layout = "_Layout";
+}
+
+<body id="venues">
+  <h1>Bands</h1>
+  <ul>
+    @foreach (var band in Model)
+    {
+      <a href="/band/detail/@band.GetId()"><li>@band.GetName()</li></a>
+    }
+  </ul>
+</body>
