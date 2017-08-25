@@ -115,5 +115,79 @@ namespace BandTracker.Models
       conn.Close();
     }
 
+    public void Delete()
+    {
+      MySqlConnection conn = DB.Connection();
+      conn.Open();
+
+      var cmd = conn.CreateCommand() as MySqlCommand;
+      cmd.CommandText = @"DELETE FROM venues WHERE id = @id;";
+
+      MySqlParameter idParam = new MySqlParameter();
+      idParam.ParameterName = "@id";
+      idParam.Value = _id;
+      cmd.Parameters.Add(idParam);
+
+      cmd.ExecuteNonQuery();
+      conn.Close();
+    }
+
+    public static Venue Find(int searchId)
+    {
+      MySqlConnection conn = DB.Connection();
+      conn.Open();
+
+      var cmd = conn.CreateCommand() as MySqlCommand;
+      cmd.CommandText = @"SELECT * FROM venues WHERE id = @id;";
+
+      MySqlParameter idParam = new MySqlParameter();
+      idParam.ParameterName = "@id";
+      idParam.Value = searchId;
+      cmd.Parameters.Add(idParam);
+
+      var rdr = cmd.ExecuteReader() as MySqlDataReader;
+      int id = 0;
+      string name = "";
+      int price = 0;
+
+      while(rdr.Read())
+      {
+        id = rdr.GetInt32(0);
+        name = rdr.GetString(1);
+        price = rdr.GetInt32(2);
+      }
+      Venue foundVenue = new Venue(name, price, id);
+      conn.Close();
+      return foundVenue;
+    }
+
+    public void Update(string newName, int newPrice)
+    {
+      MySqlConnection conn = DB.Connection();
+      conn.Open();
+
+      var cmd = conn.CreateCommand() as MySqlCommand;
+      cmd.CommandText = @"UPDATE venues SET name = @name, price = @price WHERE id = @id;";
+
+      MySqlParameter nameParam = new MySqlParameter();
+      nameParam.ParameterName = "@name";
+      nameParam.Value = newName;
+      cmd.Parameters.Add(nameParam);
+
+      MySqlParameter priceParam = new MySqlParameter();
+      priceParam.ParameterName = "@price";
+      priceParam.Value = newPrice;
+      cmd.Parameters.Add(priceParam);
+
+      MySqlParameter idParam = new MySqlParameter();
+      idParam.ParameterName = "@id";
+      idParam.Value = _id;
+      cmd.Parameters.Add(idParam);
+
+      cmd.ExecuteNonQuery();
+      conn.Close();
+    }
+
+
   }
 }
