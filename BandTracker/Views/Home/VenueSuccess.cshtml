@@ -4,13 +4,12 @@
 
 <body id="venue-form">
   <h1 class="header">The venue <em>@Model.GetName()</em> has been successfully created!</h1>
-  <div class="container">
-    <div class="well success">
-      <p class="detail"><strong>Venue name:</strong> @Model.GetName()</p>
-      <p class="detail"><strong>Venue price:</strong> $@Model.GetPrice()</p>
-    </div>
-    <a href="/view/venues"><button type="button" class="btn btn-default form-btns">View Venues</button></a>
-    <a href="/view/bands"><button type="button" class="btn btn-default form-btns">View Bands</button></a>
-    <a href="/"><button type="button" class="btn btn-default form-btns">Go home</button></a>
+
+  <div class="well details-past">
+    <p class="detail"><strong>Venue name:</strong> @Model.GetName()</p>
+    <p class="detail"><strong>Venue price:</strong> $@Model.GetPrice()</p>
   </div>
+  <a href="/view/venues"><button type="button" class="btn btn-default form-btns">View Venues</button></a>
+  <a href="/view/bands"><button type="button" class="btn btn-default form-btns">View Bands</button></a>
+  <a href="/"><button type="button" class="btn btn-default form-btns">Go home</button></a>
 </body>

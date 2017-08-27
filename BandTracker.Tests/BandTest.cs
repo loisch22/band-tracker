@@ -148,6 +148,25 @@ namespace BandTracker.Tests
 
       CollectionAssert.AreEqual(expected, actual);
     }
+    // [TestMethod]
+    // public void Delete_DeletesBandFromSpecificVenueOnly_Void()
+    // {
+    //   Band newBand = new Band("Green Day", 200);
+    //   newBand.Save();
+    //   Venue newVenue = new Venue("Key Arena", 200);
+    //   newVenue.Save();
+    //   Venue newVenue2 = new Venue("Gorge", 400);
+    //   newVenue2.Save();
+    //   newBand.AddVenue(newVenue.GetId());
+    //   newBand.AddVenue(newVenue2.GetId());
+    //
+    //   newBand.Delete(newVenue.GetId());
+    //
+    //   List<Venue> expected = new List<Venue>{newVenue2};
+    //   List<Venue> actual = newBand.GetVenues();
+    //
+    //   CollectionAssert.AreEqual(expected, actual);
+    // }
 
   }
 }

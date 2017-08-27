@@ -4,14 +4,14 @@
 
 <body id="band-form">
   <h1 class="header">The band <em>@Model.GetName()</em> has been successfully added!</h1>
-  <div class="container">
-    <div class="well form-well">
-      <p class="detail"><strong>Band name:</strong> @Model.GetName()</p>
-      <p class="detail"><strong>Band price:</strong> $@Model.GetPrice()</p>
-    </div>
 
-    <a href="/view/bands"><button type="button" class="btn btn-default form-btns">View Bands</button></a>
-    <a href="/view/venues"><button type="button" class="btn btn-default form-btns">View Venues</button></a>
-    <a href="/"><button type="button" class="btn btn-default form-btns">Go home</button></a>
+  <div class="well detail-past">
+    <p class="detail"><strong>Band name:</strong> @Model.GetName()</p>
+    <p class="detail"><strong>Band price:</strong> $@Model.GetPrice()</p>
   </div>
+
+  <a href="/view/bands"><button type="button" class="btn btn-default form-btns">View Bands</button></a>
+  <a href="/view/venues"><button type="button" class="btn btn-default form-btns">View Venues</button></a>
+  <a href="/"><button type="button" class="btn btn-default form-btns">Go home</button></a>
+
 </body>

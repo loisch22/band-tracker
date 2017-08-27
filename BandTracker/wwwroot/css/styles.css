@@ -97,8 +97,7 @@
   background-attachment: fixed;
 }
 .form-well, .details-well, .details-past {
-  margin-top: 5%;
-  opacity: .57;
+  margin-top: 30%;
   border-radius: 0;
   padding: 40px;
   padding-bottom: 95px;
@@ -138,11 +137,9 @@
 }
 .form-btns {
   float: right;
-  margin-top: 20px;
-  margin-left: 50px;
-  margin-bottom: 15%;
+  margin: 20px 55px 15% 50px;
   letter-spacing: 4px;
-  padding: 10px 15px 10px 15px;
+  padding: 15px 20px 15px 20px;
   font-size: 15px;
   background: transparent;
   color: #ffffff;
@@ -158,10 +155,8 @@
   margin-bottom: 15px;
 }
 .btn-update, .btn-delete {
-  float: right;
-  margin-left: 40px;
-  margin-top: 40px;
-  margin-bottom: 30px;
+  margin-top: 20px;
+  margin-bottom: 20px;
   font-size: 13.5px;
   letter-spacing: 3px;
   padding: 8px 16px 8px 16px;
@@ -184,4 +179,8 @@
 }
 .select-btn {
   letter-spacing: 2px;
+}
+.line {
+  background: #000000;
+  border: solid 1px;
 }

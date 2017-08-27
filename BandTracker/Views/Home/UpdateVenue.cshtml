@@ -4,15 +4,14 @@
 
 <body id="venue-form">
   <h1 class="header">Update @Model.GetName()</h1>
-  <div class="container">
-    <div class="well form-well">
-      <form action="/venue/update/@Model.GetId()/success" method="post" class="form-group">
-        <label class="label" for="name">Venue name:</label>
-        <input type="text" name="name" class="form-control form-field" value="@Model.GetName()">
-        <label class="label" for="price">Venue price:</label>
-        <input type="text" name="price" class="form-control form-field" value="@Model.GetPrice()">
-        <a href="/venue/detail/@Model.GetId()"><button type="button" class="btn btn-default btn-delete">Cancel</button></a>
-        <button type="submit" class="btn btn-success btn-update">Update Venue</button>
-      </form>
-
+  <div class="well details-past">
+    <form action="/venue/update/@Model.GetId()/success" method="post" class="form-group">
+      <label class="label" for="name">Venue name:</label>
+      <input type="text" name="name" class="form-control form-field" value="@Model.GetName()">
+      <label class="label" for="price">Venue price:</label>
+      <input type="text" name="price" class="form-control form-field" value="@Model.GetPrice()">
+      <a href="/venue/detail/@Model.GetId()"><button type="button" class="btn btn-default btn-delete">Cancel</button></a>
+      <button type="submit" class="btn btn-success btn-update">Update Venue</button>
+    </form>
+  </div>
 </body>

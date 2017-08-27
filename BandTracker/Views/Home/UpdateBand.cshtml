@@ -5,15 +5,13 @@
 <body id="band-form">
   <h1 class="header">Update @Model.GetName()</h1>
 
-  <div class="container">
-    <div class="well form-well">
-      <form action="/band/update/@Model.GetId()/success" method="post" class="form-group">
-        <label class="label" for="name">Band name:</label>
-        <input type="text" name="name" class="form-control form-field" value="@Model.GetName()">
-        <label class="label" for="price">Band price:</label>
-        <input type="text" name="price" class="form-control form-field" value="@Model.GetPrice()">
-        <a href="/band/detail/@Model.GetId()"><button type="button" class="btn btn-default btn-delete">Cancel</button></a>
-        <button type="submit" class="btn btn-success btn-update">Update Band</button>
-      </form>
-    </div>
-</body>
+  <div class="well detail-past">
+    <form action="/band/update/@Model.GetId()/success" method="post" class="form-group">
+      <label class="label" for="name">Band name:</label>
+      <input type="text" name="name" class="form-control form-field" value="@Model.GetName()">
+      <label class="label" for="price">Band price:</label>
+      <input type="text" name="price" class="form-control form-field" value="@Model.GetPrice()">
+      <a href="/band/detail/@Model.GetId()"><button type="button" class="btn btn-default btn-delete">Cancel</button></a>
+      <button type="submit" class="btn btn-success btn-update">Update Band</button>
+    </form>
+  </body>

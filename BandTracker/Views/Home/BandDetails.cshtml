@@ -5,38 +5,36 @@
 <body id="band-details">
   <h1 class="header">Details for the band: <em>@Model["band"].GetName()</em></h1>
 
-  <div class="container">
-    <div class="well details-well">
-      <p class="detail"><strong>Band name:</strong> @Model["band"].GetName()</p>
-      <p class="detail"><strong>Band price:</strong> $@Model["band"].GetPrice()</p>
-      <a href='/band/delete/@Model["band"].GetId()'><button type="button" class="btn btn-delete">Delete</button></a>
-      <a href='/band/update/@Model["band"].GetId()'><button type="button" class="btn btn-update">Update Details</button></a>
-    </div>
 
-    <div class="well details-past">
-      <p class="detail"><strong>Past venues performed:</strong></p>
-        <ul>
-          @foreach (var venue in @Model["venues"])
-          {
-            <a class="venue-list" href="/venue/detail/@venue.GetId()"><li class="list-space">@venue.GetName()</li></a>
-          }
-        </ul>
+  <div class="well details-past">
+    <p class="detail"><strong>Band name:</strong> @Model["band"].GetName()</p>
+    <p class="detail"><strong>Band price:</strong> $@Model["band"].GetPrice()</p>
+    <a href='/band/update/@Model["band"].GetId()'><button type="button" class="btn btn-update">Update Details</button></a>
+    <a href='/band/delete/@Model["band"].GetId()'><button type="button" class="btn btn-delete">Delete</button></a>
+    <hr class="line">
 
-      <p class="detail"><strong>Add another venue to @Model["band"].GetName():</strong></p>
-      <form action='/add/venue/band/@Model["band"].GetId()' method="post">
-        <label for="venue"><h5 class="detail">Select Venue:</h5></label>
-        <select class="selectpicker" name="venue">
-          @foreach(var venue in @Model["allVenues"])
-          {
-            <option value="@venue.GetId()">@venue.GetName()</option>
-          }
-        </select>
-        <button type="submit" name="button" class="btn btn-success select-btn">Select venue</button>
-      </form>
+    <p class="detail"><strong>Past venues performed:</strong></p>
+    <ul>
+      @foreach (var venue in @Model["venues"])
+      {
+        <a class="venue-list" href="/venue/detail/@venue.GetId()"><li class="list-space">@venue.GetName()</li></a>
+      }
+    </ul>
+    <hr class="line">
 
-      <a href="/venue/form"><button type="button" class="btn btn-default create-venue">Add New Venue</button></a>
-    </div>
+    <p class="detail"><strong>Add another venue to @Model["band"].GetName():</strong></p>
+    <form action='/add/venue/band/@Model["band"].GetId()' method="post">
+      <label for="venue"><h5 class="detail">Select Venue:</h5></label>
+      <select class="selectpicker" name="venue">
+        @foreach(var venue in @Model["allVenues"])
+        {
+          <option value="@venue.GetId()">@venue.GetName()</option>
+        }
+      </select>
+      <button type="submit" name="button" class="btn btn-success select-btn">Select venue</button>
+    </form>
 
-    <a href="/view/bands"><button type="button" class="btn btn-default form-btns">View bands</button></a>
+    <a href="/venue/form"><button type="button" class="btn btn-default create-venue">Add New Venue</button></a>
   </div>
+  <a href="/view/bands"><button type="button" class="btn btn-default form-btns">View bands</button></a>
 </body>
