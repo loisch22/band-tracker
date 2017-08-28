@@ -7,9 +7,16 @@
   <div class="container">
     <div class="well venue-well">
       <ul>
-        @foreach (var venue in Model)
+        @if (@Model.Count == 0)
         {
-          <a class="venue-list" href="/venue/detail/@venue.GetId()"><li class="list-space">@venue.GetName()</li></a>
+          <p class="detail">There are no venues added</p>
+        }
+        else
+        {
+          @foreach (var venue in Model)
+          {
+            <a class="venue-list" href="/venue/detail/@venue.GetId()"><li class="list-space">@venue.GetName()</li></a>
+          }
         }
       </ul>
     </div>
