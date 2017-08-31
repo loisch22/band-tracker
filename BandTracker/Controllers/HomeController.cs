@@ -196,13 +196,13 @@ namespace BandTracker.Controllers
 
       return View(foundVenue);
     }
-    [HttpGet("/band/delete/{bandId}/venue/{venueId}")]
-    public ActionResult DeleteBand(int bandId, int venueId)
-    {
-      Band foundBand = Band.Find(bandId);
-      foundBand.Delete(venueId);
-
-      return View(foundBand);
-    }
+    // [HttpGet("/band/delete/{bandId}/venue/{venueId}")]
+    // public ActionResult DeleteBand(int bandId, int venueId)
+    // {
+    //   Band foundBand = Band.Find(bandId);
+    //   foundBand.Delete(venueId);
+    //
+    //   return View(foundBand);
+    // }
   }
 }
